@@ -32,8 +32,8 @@ func NewAuthenticatedSession(region string) (*session.Session, error) {
 func NewAuthenticatedSessionFromDefaultCredentials(region string) (*session.Session, error) {
 	awsConfig := aws.NewConfig().WithRegion(region)
 
-	sessionOptions := session.Options {
-		Config: *awsConfig,
+	sessionOptions := session.Options{
+		Config:            *awsConfig,
 		SharedConfigState: session.SharedConfigEnable,
 	}
 
